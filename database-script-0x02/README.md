@@ -1,0 +1,1 @@
+# this directory contains sql statement to insert test data into the tables created 

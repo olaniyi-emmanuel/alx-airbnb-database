@@ -1,0 +1,1 @@
+# This directory contains the SQL statement for the schema designs 
