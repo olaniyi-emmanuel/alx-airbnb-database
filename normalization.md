@@ -1,0 +1,1 @@
+# I checked throught the database schema, the  schema is in 3NF,  all tables meet the requirements
