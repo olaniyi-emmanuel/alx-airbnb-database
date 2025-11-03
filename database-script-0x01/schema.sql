@@ -61,6 +61,26 @@ CREATE TABLE payment (
   FOREIGN KEY (booking_id) REFERENCES booking(booking_id) ON DELETE CASCADE
 );
 
+CREATE TYPE payment_status AS ENUM('PAID', 'FAILED', 'REFUNDED', 'CANCELLED', 'VOIDED')
+
+ALTER TABLE payment 
+ADD payment_status payment_status NOT NULL DEFAULT 'VOIDED'
+
+
+-- On booking table
+CREATE INDEX idx_booking_user_id ON booking(user_id);
+CREATE INDEX idx_booking_property_id ON booking(property_id);
+CREATE INDEX idx_booking_created_at ON booking(created_at);
+
+-- On payment table
+CREATE INDEX idx_payment_booking_id ON payment(booking_id);
+
+-- On users table
+CREATE INDEX idx_users_user_id ON users(user_id);
+
+-- On property table
+CREATE INDEX idx_property_property_id ON property(property_id);
+
 ---🟠 `review` Table
 
 CREATE TABLE review (
