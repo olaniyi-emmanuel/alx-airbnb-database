@@ -1,5 +1,4 @@
-EXPLAIN 
-ANALYZE 
+
 SELECT
   b.booking_id,
   b.status AS booking_status,
