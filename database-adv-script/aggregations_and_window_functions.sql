@@ -20,6 +20,7 @@ ORDER BY bookings DESC
 --- Use a window function (ROW_NUMBER, RANK) to rank properties based on the total number of bookings they have received.
 
 select * from property 
+ROW_NUMBER( ) OVER ()
 select * from booking; 
 
 SELECT 
