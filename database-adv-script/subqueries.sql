@@ -28,9 +28,9 @@ u.phone_number,
 u.email, 
 role
 from users u 
-where (
+WHERE  (
     select COUNT(*) AS confirmed_bookings 
-    from booking b where b.status = 'confirmed'
+    from booking b WHERE  b.status = 'confirmed'
     AND 
     b.user_id = u.user_id
     GROUP by b.status 
