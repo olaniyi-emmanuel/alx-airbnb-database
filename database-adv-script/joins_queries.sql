@@ -48,5 +48,6 @@ b.status
 FROM users AS u
 FULL OUTER JOIN booking AS b
 ON u.user_id = b.user_id ;
+ORDER BY user_id
  
 
