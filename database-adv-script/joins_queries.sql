@@ -12,7 +12,8 @@ b.total_price,
 b.status
 FROM users AS u
 INNER JOIN booking AS b
-ON u.user_id = b.user_id ;
+ON u.user_id = b.user_id 
+ORDER BY first_name;
 
 
 --Left Join 
