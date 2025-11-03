@@ -8,6 +8,7 @@ CREATE INDEX idx_booking_created_at ON booking(created_at);
 CREATE INDEX idx_payment_booking_id ON payment(booking_id);
 
 EXPLAIN
+ANALYZE
 SELECT
   b.booking_id,
   b.status AS booking_status,
